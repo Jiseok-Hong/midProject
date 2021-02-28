@@ -8,7 +8,7 @@ export default class extends React.Component{
   }
   componentDidMount(){
     const {loading} = this.state;
-    setTimeout(() => {this.setState({loading: false})}, 2500);
+    setTimeout(() => {this.setState({loading: false})}, 4000); //4000 is default 
   }
   render(){
     const {loading} = this.state;
