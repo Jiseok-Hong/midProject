@@ -76,6 +76,7 @@ const Contact = styled.div`
     background-color: #EBE5D9;
     padding: 60px;
     z-index: 10;
+    transform: scale(0);
     /* display: none; */
     display: flex;
     justify-content: center;
@@ -83,7 +84,17 @@ const Contact = styled.div`
     &:hover{ 
         border: 1px solid #7b86a0;
     }
-    
+    animation: aboutshow 1s ease forwards;
+    animation-delay: 1s;
+    @keyframes aboutshow{
+        0%{
+            transform: scale(0) rotate(0deg);
+        }
+        
+        100%{
+            transform: scale(1) rotate(720deg);
+        }
+    }
 `;
 
 
@@ -189,11 +200,23 @@ const Project = styled.div`
     z-index: 10;
     padding: 60px;
     /* display: none; */
+    transform: scale(0);
     display: flex;
     justify-content: center;
     align-items: center;
     &:hover{ 
         border: 1px solid #7b86a0;
+    }
+    animation: aboutshow 1s ease forwards;
+    animation-delay: 1s;
+    @keyframes aboutshow{
+        0%{
+            transform: scale(0) rotate(0deg);
+        }
+        
+        100%{
+            transform: scale(1) rotate(720deg);
+        }
     }
 `;
 
@@ -326,11 +349,10 @@ const Rotatefive = styled.div`
 const CircleContainer = styled.div`
     width: 1400px;
     height: 1400px;
+    transform: scale(0.4);
     background-color: transparent;
     position: absolute;
     display: inline-block;
-    top: 250px;
-    left: 250px;
     border-radius: 50%;
     z-index: 5;
 `;
@@ -339,7 +361,7 @@ const Indicator = styled.div`
     position: absolute;
     width: 50px;
     height: 70px;
-    bottom: 80px;
+    top:45%;
     border-radius: 30px;
     transform: translateX(-50%);
     left: 50%;
@@ -347,6 +369,7 @@ const Indicator = styled.div`
     border: solid 2px white;
     animation: indicatorshow 1.5s ease forwards;
     animation-delay: 3s;
+    z-index: 5;
     @keyframes indicatorshow{
         0%{
             opacity: 0;
@@ -378,7 +401,45 @@ const ScrollBar = styled.div`
         }
     } 
 `;
+const Information = styled.div`
+    width: 25%;
+    height: 45%;
+    border-bottom-right-radius: 100%;
+    background-color: rgba(255,255,255,0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* border--moz-outline-radius-bottomright: solid 6px #222; */
+    /* opacity: 0; */
+    animation: infoup 3s linear forwards;
+    @keyframes infoup{
+        0%{
+            background-color: rgba(255,255,255,0);
+        }
+        100%{
+            background-color: rgba(255,255,255,0.6);
+        }
+    }
 
+`;
+const Selected = styled.div`
+    width: 25%;
+    height: 45%;
+    border-bottom-left-radius: 100%;
+    background-color: rgba(255,255,255,0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: infoup 3s linear forwards;
+    @keyframes infoup{
+        0%{
+            background-color: rgba(255,255,255,0);
+        }
+        100%{
+            background-color: rgba(255,255,255,0.6);
+        }
+    }
+`;
 export default class extends React.Component{ 
     constructor(props){
         super(props);
@@ -426,9 +487,9 @@ export default class extends React.Component{
     </SLink>
     </Rotatefive>
     </CircleContainer>
-    <SVG height="1000" width="1000">
-        <circle cx="50%" cy="100%" r="700" stroke="black" stroke-width="10" fill="transparent" />
-    </SVG>
+    <Information></Information>
+    <Selected></Selected>
+    
     <Indicator><ScrollBar></ScrollBar></Indicator>
     
     </Container>};
