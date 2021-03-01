@@ -50,6 +50,7 @@ const Random = styled.div`
     
     &:hover{ 
         border: 1px solid #7b86a0;
+        background-color: rgba(20,176,155,0.7);
     }
     transform: scale(0);
     animation: aboutshow 1s ease forwards;
@@ -83,6 +84,7 @@ const Contact = styled.div`
     align-items: center;
     &:hover{ 
         border: 1px solid #7b86a0;
+        background-color: rgba(235,229,217,0.7);
     }
     animation: aboutshow 1s ease forwards;
     animation-delay: 1s;
@@ -138,6 +140,7 @@ const About = styled.div`
     
     &:hover{ 
         border: 1px solid #7b86a0;
+        background-color: rgba(3,89,174,0.9);
     }
     transform: scale(0);
     animation: aboutshow 1s ease forwards;
@@ -172,8 +175,10 @@ const Game = styled.div`
     align-items: center;
     &:hover{ 
         border: 1px solid #7b86a0;
+        background-color: rgba(188,95,106,0.9);
     }
     transform: scale(0);
+    transition: transform 1s ease;
     animation: aboutshow 1s ease forwards;
     animation-delay: 1s;
     @keyframes aboutshow{
@@ -206,6 +211,7 @@ const Project = styled.div`
     align-items: center;
     &:hover{ 
         border: 1px solid #7b86a0;
+        background-color: rgba(229,187,75,0.9);
     }
     animation: aboutshow 1s ease forwards;
     animation-delay: 1s;
@@ -486,6 +492,7 @@ export default class extends React.Component{
         <Game ><Span>Game</Span></Game>
     </SLink>
     </Rotatefive>
+    
     </CircleContainer>
     <Information></Information>
     <Selected></Selected>
