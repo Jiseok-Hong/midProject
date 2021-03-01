@@ -25,18 +25,16 @@ const Wrap = styled.div`
 `;
 
 const Text = styled.div`
-    animation: fade 1.5s ease-in-out;
+    animation: fade 1.4s ease-in-out;
     animation-delay: 2.7s;
     @keyframes fade{
         0%{
             
             transform: scale(1);
         }
-        50%{
-            transform: scale(1.5);
-        }
+        
         100%{
-            transform: scale(0);
+            transform: scale(0.1);
         }
     }
 `;
@@ -47,7 +45,7 @@ const Introduce = styled.p`
     position: relative;
     color:  #222;
     margin: auto;
-    font-size: 40px;
+    font-size: 30px;
     z-index:20;
     font-family: 'Akaya Telivigala', cursive;
     :before{
