@@ -13,8 +13,8 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     @import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');
-    font-family: 'Akaya Telivigala', cursive;
-    font-size: 50px;
+    font-family: 'Helvetica', cursive;
+    font-size: 45px;
     animation: backg 2s ease forwards;
     animation-delay: 1s;
     @keyframes backg{
@@ -35,10 +35,10 @@ const Random = styled.div`
     width: 100%;
     height: 580px;
     border-radius: 50%;
-    border: 1px solid white;
+    
     overflow: hidden;
     padding: 60px;
-    border: 1px solid white;
+    
     overflow: hidden;
     background-color: #14b09b;
     z-index: 10;
@@ -57,11 +57,11 @@ const Random = styled.div`
     animation-delay: 1s;
     @keyframes aboutshow{
         0%{
-            transform: scale(0) rotate(0deg);
+            transform: scale(0);
         }
         
         100%{
-            transform: scale(1) rotate(720deg);
+            transform: scale(1) ;
         }
     }
 `;
@@ -70,9 +70,9 @@ const Contact = styled.div`
     width: 100%;
     height: 580px;
     border-radius: 50%;
-    border: 1px solid white;
+    
     padding: 60px;
-    border: 1px solid white;
+   
     overflow: hidden;
     background-color: #EBE5D9;
     padding: 60px;
@@ -90,11 +90,11 @@ const Contact = styled.div`
     animation-delay: 1s;
     @keyframes aboutshow{
         0%{
-            transform: scale(0) rotate(0deg);
+            transform: scale(0) ;
         }
         
         100%{
-            transform: scale(1) rotate(720deg);
+            transform: scale(1) ;
         }
     }
 `;
@@ -103,11 +103,11 @@ const Contact = styled.div`
 
 const Span = styled.span`
     
-    
+    color: rgba(240,255,255,0.9);
     transform-origin: bottom left;
-    font-size: 80px;
+    font-size: 120px;
    
-    text-shadow: 
+    /* text-shadow: 
         0px -2px 3px #222,
         -1px -2px 3px #222,
         -2px -2px 3px #222,
@@ -122,14 +122,14 @@ const Span = styled.span`
 
         -3px -5px 1px #222,
         -4px -5px 1px #222,
-        -5px -5px 1px #222;
+        -5px -5px 1px #222; */
 
 `;
 const About = styled.div`
     width: 100%;
     height: 580px;
     border-radius: 50%;
-    border: 1px solid white;
+    
     overflow: hidden;
     padding: 60px;
     display: flex;
@@ -147,11 +147,11 @@ const About = styled.div`
     animation-delay: 1s;
     @keyframes aboutshow{
         0%{
-            transform: scale(0) rotate(0deg);
+            transform: scale(0);
         }
         
         100%{
-            transform: scale(1) rotate(720deg);
+            transform: scale(1);
         }
     }
 
@@ -161,10 +161,10 @@ const Game = styled.div`
     width: 100%;
     height: 580px;
     border-radius: 50%;
-    border: 1px solid white;
+    
     overflow: hidden;
     padding: 60px;
-    border: 1px solid white;
+    
     overflow: hidden;
     background-color: #bc5f6a;
     z-index: 10;
@@ -183,11 +183,11 @@ const Game = styled.div`
     animation-delay: 1s;
     @keyframes aboutshow{
         0%{
-            transform: scale(0) rotate(0deg);
+            transform: scale(0);
         }
         
         100%{
-            transform: scale(1) rotate(720deg);
+            transform: scale(1);
         }
     }
 `;
@@ -196,10 +196,10 @@ const Project = styled.div`
     width: 100%;
     height: 580px;
     border-radius: 50%;
-    border: 1px solid white;
+    
     overflow: hidden;
     padding: 60px;
-    border: 1px solid white;
+  
     overflow: hidden;
     background-color: #e5bb4b;
     z-index: 10;
@@ -217,11 +217,11 @@ const Project = styled.div`
     animation-delay: 1s;
     @keyframes aboutshow{
         0%{
-            transform: scale(0) rotate(0deg);
+            transform: scale(0) ;
         }
         
         100%{
-            transform: scale(1) rotate(720deg);
+            transform: scale(1);
         }
     }
 `;
@@ -266,6 +266,7 @@ const Rotatethree = styled.div`
             transform: rotate(360deg);
         }
     }
+    transition: transform .5s ease-in-out;
 `;
 const Rotateone = styled.div`
     position: absolute;
@@ -287,6 +288,7 @@ const Rotateone = styled.div`
             transform: rotate(432deg);
         }
     }
+    transition: transform .5s ease-in-out;
 `;
 const Rotatetwo = styled.div`
 position: absolute;
@@ -308,6 +310,7 @@ position: absolute;
             transform: rotate(504deg);
         }
     }
+    transition: transform .5s ease-in-out;
 `;
 const Rotatefour = styled.div`
     position: absolute;
@@ -329,6 +332,7 @@ const Rotatefour = styled.div`
             transform: rotate(576deg);
         }
     }
+    transition: transform .5s ease-in-out;
 `;
 const Rotatefive = styled.div`
     position: absolute;
@@ -351,13 +355,16 @@ const Rotatefive = styled.div`
             transform: rotate(648deg);
         }
     }
+    transition: transform .5s ease-in-out;
 `;
 const CircleContainer = styled.div`
     width: 1400px;
     height: 1400px;
-    transform: scale(0.4);
+    transform: scale(1) translateY(45%);
+    
     background-color: transparent;
     position: absolute;
+    /* transform: translateY(50%); */
     display: inline-block;
     border-radius: 50%;
     z-index: 5;
@@ -367,7 +374,7 @@ const Indicator = styled.div`
     position: absolute;
     width: 50px;
     height: 70px;
-    top:45%;
+    top:5%;
     border-radius: 30px;
     transform: translateX(-50%);
     left: 50%;
@@ -417,6 +424,7 @@ const Information = styled.div`
     left: 0;
     /* border--moz-outline-radius-bottomright: solid 6px #222; */
     /* opacity: 0; */
+    opacity: 0;
     animation: infoup 3s linear forwards;
     @keyframes infoup{
         0%{
@@ -436,6 +444,7 @@ const Selected = styled.div`
     position: absolute;
     top: 0;
     right: 0;
+    opacity: 0;
     animation: infoup 3s linear forwards;
     @keyframes infoup{
         0%{
@@ -458,7 +467,7 @@ export default class extends React.Component{
     }
     wheel = (event) => {
         const { deltaY } = event;
-        this.setState({difference: deltaY > 0 ? this.state.difference + 12 : this.state.difference - 12 });
+        this.setState({difference: deltaY > 0 ? this.state.difference + 72 : this.state.difference - 72 });
     }
 
 

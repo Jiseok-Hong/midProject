@@ -34,7 +34,7 @@ const Text = styled.div`
         }
         
         100%{
-            transform: scale(0.1);
+            transform: scale(0);
         }
     }
 `;
